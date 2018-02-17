@@ -1,0 +1,140 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: url(images/bg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 50px;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+.start-tour {
+    background-color: #000;
+    color: #fff;
+    font-size: 40px;
+    width:400px;
+    padding:30px;
+}
+.start-tour a {
+    color: #fff;
+}
+
+.container {
+    width: 1000px;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0px;
+    padding: 0px;
+    font-weight: normal;
+}
+
+h1 span {
+    font-size: 14px;
+    display: block;
+}
+p {
+    margin-bottom: 10px;
+}
+
+.footer {
+    margin: 40px 0px;
+    color: #fff;
+    font-size: 11px;
+}
+
+.red-box {
+    background-color: #CC0000;
+    padding: 30px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.grey-box {
+    background-color: #F2F2F2;
+    padding: 30px;
+}
+
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.clear {
+    clear: both;
+}
+
+.left-panel {
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.right-panel {
+    width: 680px;
+    box-sizing: border-box;
+}
+
+ul.left-nav {
+    list-style: none;
+}
+ul.left-nav a {
+    color: #CC0000;
+    text-decoration: none;
+}
+ul.left-nav li {
+    border-bottom: 1px solid rgb(122, 122, 122);
+    padding: 20px 0;
+    font-size: 28px;
+    color:#CC0000;
+    text-transform: uppercase;
+}
+ul.left-nav li.active {
+    color: #666;
+}
+
+/* login page */
+form.login-form {
+    margin-top: 50px;
+}
+form.login-form label {
+    min-width: 100px;
+    display: inline-block;
+}
+form.login-form input, form button {
+    padding:8px;
+    font-size: 18px;
+    min-width: 200px;
+    margin-left: 10px;
+}
+form.login-form button {
+    min-width: inherit;
+    background-color: #CC9900;
+    border: 1px solid #775900;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 8px 20px;
+    cursor: pointer;
+    
+}
+
+form.login-form p {
+    margin-bottom: 20px;
+}
+
+#login-header {
+    width: 300px;
+    
+}
+
