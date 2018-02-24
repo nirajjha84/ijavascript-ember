@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('dashboard');
   this.route('about');
   this.route('team');
+  this.route('authenticate');
 });
 
 export default Router;

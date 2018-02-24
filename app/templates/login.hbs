@@ -2,15 +2,27 @@
 
 <!-- login form -->
 <div class="red-box">
+   
+   <!--  {{login-form}} -->
+
     <form class="login-form">
+        <!-- top lebel error-->
+        {{#if errorMessage}}
+            <div class="top-level-error">
+                {{errorMessage}}
+            </div>
+        {{/if}}
+
+        <!-- form -->
         <p>
-            <label for="userid">User Id</label> 
-            <input type="text" name="userid" value="" placeholder="Enter User Id"></p>
+            <label for="userid">User Id</label>
+            {{input value=userid placeholder="Enter User Id"}}
+        </p>
         <p>
             <label for="password">Password</label>
-            <input type="password" name="password" value="" placeholder="Enter Password">
+            {{input value=password type="password" placeholder="Enter Password"}}
         </p>
 
-        <p align="right"><button {{ action "onLoginSubmit" }}>Log In</button></p>
+        <p><button {{ action "onLoginSubmit" }}>Log In</button></p>
     </form>
 </div>
