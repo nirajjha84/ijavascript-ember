@@ -40,14 +40,15 @@ export default Controller.extend({
         //this.store.findRecord('authenticate', 1).then(function(success, response) {
         //this.transitionToRoute('authenticate').then(function(success, response) {
         Ember.$.getJSON('/stub/AuthenticateUser.json') .then(function(response, success) {
-            if(success) {
-                me.validateUser();
+            if(response.success) {
+                me.validateUser(response);
             } else {
                 me.showApiException();
             }
             })
             // check API errors
             .catch(function(reason) {  
+                debugger;
                 me.showApiException();
             });
     },
@@ -64,7 +65,7 @@ export default Controller.extend({
         // check response
         // if authenticated then re-direct to dashboard page
         if(response.isUserAuthenticated) {
-            me.transitionToRoute('dashboard');
+            this.transitionToRoute('dashboard');
         } else {
             // show top level error incase not authenticated
             this.setProperties({
