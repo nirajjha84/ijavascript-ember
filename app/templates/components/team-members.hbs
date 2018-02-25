@@ -1,0 +1,25 @@
+<!--
+re-usable component.
+
+use as {{team-members}} inside other handlebars.
+
+it will populate list of team members data from a local json file
+-->
+
+{{yield}}
+
+<ul class="team">
+    {{#each team.members as |member|}}
+
+    <li>
+        <img src="assets/images/{{member.image}}"><br>
+        {{member.name}}
+    </li>
+
+    {{else}}
+    Sorry! No team mebers found.
+
+    {{/each}}
+
+    <div class="clear"></div>
+</ul>

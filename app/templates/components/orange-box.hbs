@@ -1,0 +1,12 @@
+<!--
+re-usable component.
+
+use as {{orange-box}} inside other handlebars.
+
+it will appear as orange box.
+if user clicks on the box, box will toggle color to red and orange
+-->
+
+{{yield}}
+
+<div {{ action "toggleColor" }} class="{{if isOrange 'orange-box' 'redcolor-box'}}"></div>

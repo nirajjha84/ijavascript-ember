@@ -7,7 +7,78 @@
 
     <!-- right section -->
     <div class="float-right grey-box right-panel">
-        <h2>Welcome Niraj Jha!</h2>
+        <div class="float-left mrgn-rgt20">
+            <img src="assets/images/user_img.png">
+        </div>
+
+        <div class="float-left">
+            <h2>
+                Welcome {{customer.name}}!
+                <span>Last login: {{customer.last_login}}</span>
+            </h2>
+        </div>
+
+        <div class="clear"></div>
+
+        <hr>
+
+        <h3>Account Balance: {{customer.balance}}</h3>
+
+        <table>
+            <thead>
+                <td>Date</td>
+                <td>Description</td>
+                <td>Amount</td>
+            </thead>
+
+            {{#each customer.transaction as |transaction|}}
+                
+                <tr>
+                    <td>{{transaction.date}}</td>
+                    <td>{{transaction.desc}}</td>
+                    <td>{{transaction.amount}}</td>
+                </tr>
+
+                {{else}}
+                
+                <tr>
+                    <td colspan="3">You have no transaction</td>
+                </tr>
+
+            {{/each}}
+
+            
+        </table>
+
+        <hr>
+
+        <div class="float-left">
+            <!-- modal window example -->
+            <h4>Subscribe to Alerts</h4>
+            <form>
+                {{input type="checkbox" checked=isSMS}} SMS Alert <br>
+                {{input type="checkbox" checked=isNewsletter}} Marketting Newsletter<br>
+                {{input type="checkbox" checked=isFlyers}} Flyers<br>
+
+                <p><button class="blue_btn" {{ action "checkSubscription" isSMS isNewsletter isFlyers}}>Subscribe</button></p>
+            </form>
+        </div>
+
+        <div class="float-right">
+            <!-- Data binding example -->
+            <p>
+                <label for="databinding">Two Way Data Binding</label><br>
+                {{input value=databinding placeholder="Enter Value for two way data binding"}}
+            </p>
+            <!-- data binding text, will appear if text provided in binding textbox -->
+            <p>{{databinding}}</p>
+
+            <p>
+                {{input value=customer.name placeholder="Modify customer name"}}
+            </p>
+        </div>
+
+        <div class="clear"></div>
     </div>
 
     <div class="clear"></div>
