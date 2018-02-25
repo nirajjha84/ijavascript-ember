@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('about');
   this.route('team');
   this.route('authenticate');
+  this.route('fourohfour', { path: "*path"});
 });
 
 export default Router;

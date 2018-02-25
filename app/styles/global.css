@@ -4,7 +4,7 @@
 }
 
 body {
-    background: url(images/bg.jpg) no-repeat center center fixed; 
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(images/bg.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -91,7 +91,6 @@ input[type="text"], button {
     margin: 40px 0 0 0px;
     color: #fff;
     font-size: 11px;
-    text-align: center;
 }
 
 .red-box {

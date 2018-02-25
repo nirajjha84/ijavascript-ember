@@ -12,7 +12,7 @@ export default Component.extend({
          * Method toggle @property isOrange to true || false
          * Value change reflects in the handlebar helper as class name change 
         */
-        toggleColor: function (element) {
+        toggleColor: function () {
             this.toggleProperty('isOrange');
         }
     }

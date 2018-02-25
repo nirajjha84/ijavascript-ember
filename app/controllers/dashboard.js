@@ -1,4 +1,5 @@
 import Controller from '@ember/controller';
+import $ from 'jquery';
 
 export default Controller.extend({
 
@@ -7,6 +8,8 @@ export default Controller.extend({
      * init method to get user data from API
     */
     init: function() {
+        this._super(...arguments);
+
         this.retrieveUserDetails();
     },
 
@@ -25,13 +28,13 @@ export default Controller.extend({
             url: '/stub/RetrieveUserDetails.json'
         }).then((response) => {
             if(response.success) {
-               this.set('customer', response.customer);
+               me.set('customer', response.customer);
             } else {
                 alert('Retrieve User Details API - SUCCESS False');
             }           
         })
         // check API errors
-        .catch(function(reason) {  
+        .catch(function() {  
             alert('Retrieve User Details API Exeption');
         });   
     },

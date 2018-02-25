@@ -1,4 +1,5 @@
 import Controller from '@ember/controller';
+import $ from 'jquery';
 
 export default Controller.extend({
     /**
@@ -64,7 +65,7 @@ export default Controller.extend({
             }           
         })
         // check API errors
-        .catch(function(reason) {  
+        .catch(function() {  
             me.showApiException();
         }); 
     },

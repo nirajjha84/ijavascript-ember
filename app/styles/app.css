@@ -86,3 +86,12 @@ ul.team li {
 ul.team li img {
     margin-bottom:10px;
 }
+
+.fouroFour h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+.fouroFour h1 span{
+    display: block;
+    font-size: 30px;
+}

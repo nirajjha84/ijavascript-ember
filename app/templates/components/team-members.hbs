@@ -12,7 +12,7 @@ it will populate list of team members data from a local json file
     {{#each team.members as |member|}}
 
     <li>
-        <img src="assets/images/{{member.image}}"><br>
+        <img src="assets/images/{{if member.image member.image 'persona.png'}}"><br>
         {{member.name}}
     </li>
 
